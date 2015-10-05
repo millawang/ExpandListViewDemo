@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/push_item_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/expand_item_list_base_back"
+                layout="@layout/expand_list_item_backview"
+                android:tag="back" />
+
+            <LinearLayout
+                android:id="@+id/push_child_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:orientation="vertical"
+                android:tag="front">
+
+                <LinearLayout
+                    android:id="@+id/push_frontView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#d9d9d9"
+                        android:focusable="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f7f7f7"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#e6e6e6">
+
+
+                            <LinearLayout
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="#e6e6e6"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/push_list_title_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:ellipsize="end"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:maxLines="3"
+                                    android:text="這是標題 這是標題 這是標題 這是標題 這是標題"
+                                    android:textColor="#575a60"
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:id="@+id/push_list_time_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:paddingBottom="5dp"
+                                    android:paddingTop="5dp"
+                                    android:singleLine="true"
+                                    android:text="這是時間!"
+                                    android:textColor="#999999"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+
+                            <ImageView
+                                android:id="@+id/push_list_expend_content"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/arrow_listdn"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:gravity="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/push_list_content_li"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/push_item_parent"
+            android:background="#cfcfcf"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#bbbbbb" />
+
+            <TextView
+                android:id="@+id/push_list_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="這是內容 這是內容 這是內容 這是內容"
+                android:layout_margin="10dp"
+                android:textColor="#575a60"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#bbbbbb"
+                android:focusable="false" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/push_list_content_li"
+            android:background="#f3f3f3"
+            android:focusable="false" />
+    </RelativeLayout>
+
+</LinearLayout>
