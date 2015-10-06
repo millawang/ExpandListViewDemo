@@ -66,6 +66,7 @@ public class MyDemoAdapter extends BaseAdapter {
 			viewHolder.contentTV = (TextView) convertView.findViewById(R.id.push_list_content);
 			viewHolder.contentli = (LinearLayout) convertView.findViewById(R.id.push_list_content_li);
 			viewHolder.ivDelete = (ImageView) convertView.findViewById(R.id.ivDelete);
+			convertView.setTag(viewHolder);
 		} else {
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
